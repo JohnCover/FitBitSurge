@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+<title>Calories</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="caloriesLayout.css">
+<!-- Steps Google vis start-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      //google.charts.load('current', {'packages': ['table', 'map', 'corechart']});
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(initialize);
+
+      function initialize() {
+         
+        //calories2
+        var query = new google.visualization.Query('https://spreadsheets.google.com/pub?key=1M8TWZL3AFjrsRNkvpaLhZfblxPZD68-BKsCvHcXqsgY');
+          
+        query.send(draw);
+      }
+
+      function draw(response) {
+        if (response.isError()) {
+          alert('Error in query');
+        }
+
+//        var data = google.visualization.arrayToDataTable([
+//          ['Label', 'Value'],
+//          ['Memory', 80],
+//          ['CPU', 55],
+//          ['Network', 68]
+//        ]);
+          
+        var options = {
+		  title: 'Caloric Intake',
+            //249 236
+          width: 249, height:236,
+          redFrom: 1800, redTo: 2000,
+          yellowFrom:1600, yellowTo: 1799,
+          max: 2000,
+          minorTicks: 5
+        };
+          
+        var ticketsData = response.getDataTable();
+		  
+        var chart = new google.visualization.Gauge(document.getElementById('right-top-bar'));
+          
+        chart.draw(ticketsData, options);
+      }
+		
+    </script>
+<!--Google vis end-->
+
+<!-- scatter vis start -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(initialize);
+      
+       function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query2 = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=1-en3rqKOC4do251uxO7Oi9fEkyFh4gQ0wJ1RdF2sY3Q');
+        query2.send(draw2);
+        }
+
+        function draw2(response) {
+          if (response.isError()) {
+            alert('Error in query');
+        }
+
+        var ticketsData2 = response.getDataTable(); 
+
+        var options = {
+          title: 'Calories Burned in a Week',
+          hAxis: {title: 'Day', minValue: 0, maxValue: 15},
+          vAxis: {title: 'Calories Burned', minValue: 0, maxValue: 15},
+          legend: 'none'
+        };
+
+        var chart2 = new google.visualization.ScatterChart(document.getElementById('filler'));
+
+        chart2.draw(ticketsData2, options);
+      }
+    </script>
+<!-- google vis end -->
+
+<!--weight google vis start -->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': [ 'corechart']});
+      google.charts.setOnLoadCallback(initialize);
+
+      function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query3 = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=1dTLgW0UZzte3VcKVPhat-MklNV8_vdQpZkojf6BcqmU');
+        query3.send(draw3);
+      }
+
+      function draw3(response) {
+        if (response.isError()) {
+          alert('Error in query');
+        }
+
+        var ticketsData3 = response.getDataTable();
+        var options = {
+          title: 'Weight Tracker',
+          curveType: 'function',
+          legend: { position: 'bottom' },
+          hAxis: { title: 'Date'},
+            series: {
+          // Gives each series an axis name that matches the Y-axis below.
+          0: {targetAxisIndex: 0},
+          1: {targetAxisIndex: 1}
+        },
+        axes: {
+          // Adds labels to each axis; they don't have to match the axis names.
+          y: {
+            0: {label: 'Weight'},
+            1: {label: 'BMI'}
+          }
+        }
+            
+          //hAxis: {ticks: [12:00, 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00]}
+        }; 
+        var chart3 = new google.visualization.LineChart(
+            document.getElementById('filler2'));
+        chart3.draw(ticketsData3, options);
+
+
+      }
+		
+    </script>
+
+<!--google vis end-->
+
+</head>
+<body>
+ <div class="container">
+
+        <div id="wrapper">
+            <header onclick="window.location='index.htm'"><img src="imgs/logo.png" height="150" alt="Fit Bit Data Visulaztion">
+            </header>
+
+            <div id="content">
+            <div id="topline">
+                <nav id="navbar">
+                    <a href="index.htm">Home</a>
+                    <a href="exercise.htm">Exercise</a>
+                    <a class="active" href="calories.htm">Dietary</a>
+                    <a href="Sleep.htm">Sleep</a>
+                </nav>
+            </div>
+                <h2>Dietary</h2>
+
+                <div id="main">
+                    <div id="leftbar">
+                        <div id="filler" class="fill-class">
+                            graph
+                        </div>
+                    </div>
+
+                    <div id="rightbar">
+
+                        <div id="right-top-bar" class="box">
+                            Box 1
+                        </div>
+
+                        <div id="right-bot-bar" class="box">
+                            <div id="filler2" class="fill-class">
+                            	Box 2
+                        	</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                        <!-- Footer -->
+               <div id="foot">
+
+                    <div class="activity" onclick="window.location='exercise.html'">
+                        <a href="exercise.htm">
+
+
+                            <div class="icon3">
+
+                            </div>
+                            <h4>
+                           Exercise
+                       </h4>
+                        </a>
+                    </div>
+
+                    <div class="activity" onclick="window.location='calories.htm'">
+                        <a class="active" href="calories.htm">
+
+                            <div class="icon">
+
+                            </div>
+                            <h4>
+                           Dietary
+                       </h4>
+                        </a>
+                    </div>
+
+                    <div class="activity" onclick="window.location='sleep.html'">
+                        <a href=Sleep.htm>
+
+                            <div class="icon2">
+                            </div>
+                            <h4>
+                           Sleep
+                       </h4>
+                        </a>
+                    </div>
+                </div>
+            <!--END footer-->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<!-- InstanceEnd -->
+</html>

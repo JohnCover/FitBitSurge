@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+<title>Exercise</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="exerciseLayout.css">
+<!-- Steps Google vis start-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': ['table', 'map', 'corechart']});
+      google.charts.setOnLoadCallback(initialize);
+
+      function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=1v51zAd3mdM2FJo_W8qmKxGnlffb9NU0KAeCoDiYW9Jg');
+        query.send(draw);
+      }
+
+      function draw(response) {
+        if (response.isError()) {
+          alert('Error in query');
+        }
+
+        var options = {
+            title : 'Steps', 
+            pieHole : 0.3, 
+            pieSliceText : 'value',
+            legend : {position : 'bottom'}
+        }
+        
+        var ticketsData = response.getDataTable();
+		  
+        var chart = new google.visualization.PieChart(
+            document.getElementById('filler4'));
+        chart.draw(ticketsData, options);
+
+
+      }
+		
+    </script>
+<!--Google vis end-->
+
+<!--Distance Google vis start -->
+<script type="text/javascript">
+      google.charts.load('current', {'packages': ['table', 'map', 'corechart']});
+      google.charts.setOnLoadCallback(initialize);
+
+      function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query2 = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=1vq2mYg0iRCwi4ZYhlXZQnInUrTKAsWqlOww-wgdZaEQ');
+        query2.send(draw2);
+      }
+
+      function draw2(response) {
+        if (response.isError()) {
+          alert('Error in query');
+        }
+    
+        var options = {
+            title : 'Distance', 
+            pieHole : 0.3, 
+            pieSliceText : 'value',
+            legend : {position : 'bottom'}
+        }
+
+        var ticketsData2 = response.getDataTable();
+		  
+        var chart2 = new google.visualization.PieChart(
+            document.getElementById('filler3'));
+        chart2.draw(ticketsData2, options);
+
+
+      }
+		
+    </script>
+<!--Google vis end-->
+    
+<!--Google vis Floors -->
+<script type="text/javascript">
+      google.charts.load('current', {'packages': ['table', 'map', 'corechart']});
+      google.charts.setOnLoadCallback(initialize);
+
+      function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query3 = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=1rubP5dSypT3PfG2C71JeknrMREOZQNUaLhxQcJrTZ6U');
+        query3.send(draw3);
+      }
+
+      function draw3(response) {
+        if (response.isError()) {
+          alert('Error in query');
+        }
+
+        var options = {
+            title : 'Floors', 
+            pieHole : 0.3, 
+            pieSliceText : 'value',
+            legend : {position : 'bottom'}
+        }
+        
+        var ticketsData3 = response.getDataTable();
+		  
+        var chart3 = new google.visualization.PieChart(
+            document.getElementById('filler2'));
+        chart3.draw(ticketsData3, options);
+
+
+      }
+		
+    </script>
+
+	<!-- CalBurn Google Vis Start -->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(initialize);
+      
+       function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query4 = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=1w2PuuwbyleZXoZ67HBwpDEFdq3URWDSWpf9nuPseKzg');
+        query4.send(draw4);
+        }
+
+        function draw4(response) {
+          if (response.isError()) {
+            alert('Error in query');
+        }
+
+        var ticketsData4 = response.getDataTable(); 
+
+        var options = {
+          title: 'Steps',
+          hAxis: {title: 'Time', minValue: 0, maxValue: 15},
+          vAxis: {title: 'Steps Taken', minValue: 10, maxValue: 100},
+          legend: 'none'
+        };
+
+        var chart4 = new google.visualization.ScatterChart(document.getElementById('filler'));
+
+        chart4.draw(ticketsData4, options);
+      }
+    </script>
+    <!--Google vis end-->
+
+</head>
+<body>
+<div class="container">
+        <div id="wrapper">
+            <header onclick="window.location='index.htm'"><img src="imgs/logo.png" height="150" alt="Fit Bit Data Visulaztion">
+            </header>
+            <!--Disabled Navation bar -->
+            <!--To be redesined, move with page - select vis type? -->
+
+            <div id="content">
+                        <div id="topline">
+                <nav id="navbar">
+                    <a href="index.htm">Home</a>
+                    <a class="active" href="exercise.htm">Exercise</a>
+                    <a href="calories.htm">Dietary</a>
+                    <a href="Sleep.htm">Sleep</a>
+                </nav>
+            </div>
+            	<h2>Exercise</h2>
+                <div id="main">
+
+                    <div id="banner">
+                        <div id="filler" class="fill-class">
+
+                        </div>
+                    </div>
+                    
+                    <div id="bottom">
+                        <div id="left2" class="box2">
+                            <div id="filler2" class="fill-class">
+
+                        </div>
+                        </div>
+                        <div id="middle2" class="box2">
+                            <div id="filler3" class="fill-class">
+
+                        </div>
+                        </div>
+                        <div id="right2" class="box2">
+                            <div id="filler4" class="fill-class">
+
+                        </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            
+                        <!-- Footer -->
+               <div id="foot">
+
+                    <div class="activity" onclick="window.location='exercise.html'">
+                        <a class="active" href="exercise.htm">
+
+
+                            <div class="icon3">
+
+                            </div>
+                            <h4>
+                           Exercise
+                       </h4>
+                        </a>
+                    </div>
+
+                    <div class="activity" onclick="window.location='calories.htm'">
+                        <a href="calories.htm">
+
+                            <div class="icon">
+
+                            </div>
+                            <h4>
+                           Dietary
+                       </h4>
+                        </a>
+                    </div>
+
+                    <div class="activity" onclick="window.location='sleep.html'">
+                        <a href=Sleep.htm>
+
+                            <div class="icon2">
+                            </div>
+                            <h4>
+                           Sleep
+                       </h4>
+                        </a>
+                    </div>
+                </div>
+            <!--END footer-->
+            </div>
+            <!--END CONTENT-->
+            <!--END RIGHTCOLUMN-->
+        </div>
+    </div>
+    <!--END WRAPPER-->
+</body>
+<!-- InstanceEnd -->
+</html>

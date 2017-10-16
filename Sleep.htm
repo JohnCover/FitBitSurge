@@ -1,0 +1,550 @@
+<!DOCTYPE HTML>
+<html>
+<title>Sleep</title>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="sleepLayout.css">
+
+    <!-- Heart Google vis start-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(initialize);
+
+        function initialize() {
+            // The URL of the spreadsheet to source data from.
+            var query = new google.visualization.Query(
+                'https://spreadsheets.google.com/pub?key=16e4R615HjbmkurNQnwAVV5BTr23lzrWt5fzU6y9JIjw');
+            query.send(draw);
+        }
+
+        function draw(response) {
+            if (response.isError()) {
+                alert('Error in query');
+            }
+
+            var ticketsData = response.getDataTable();
+            var options = {
+                title: 'Sunday Heart Rate',
+                curveType: 'function',
+                legend: {
+                    position: 'bottom'
+                },
+                vAxis: {
+                    title: 'Heart Rate'
+                },
+                hAxis: {
+                    title: 'Time'
+                }
+                //axisTitlesPosition : 'none'
+                //hAxis: {ticks: [12:00, 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00]}
+            };
+            var chart = new google.visualization.LineChart(
+                document.getElementById('filler2'));
+            chart.draw(ticketsData, options);
+
+
+        }
+    </script>
+
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(initialize);
+
+        function initialize() {
+            // The URL of the spreadsheet to source data from.
+            var query3 = new google.visualization.Query(
+                'https://spreadsheets.google.com/pub?key=1y81Z8ybP-CzLpz2V6PiYDWkvF_CfSciPlui2U5SS7H8');
+            query3.send(draw3);
+        }
+
+        function draw3(response) {
+            if (response.isError()) {
+                alert('Error in query');
+            }
+
+            var ticketsData3 = response.getDataTable();
+            var options = {
+                title: 'Monday Heart Rate',
+                curveType: 'function',
+                legend: {
+                    position: 'bottom'
+                },
+                vAxis: {
+                    title: 'Heart Rate'
+                },
+                hAxis: {
+                    title: 'Time'
+                },
+                'width' : 864,
+                'height' : 300
+                //axisTitlesPosition : 'none'
+                //hAxis: {ticks: [12:00, 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00]}
+            };
+            var chart3 = new google.visualization.LineChart(
+                document.getElementById('filler3'));
+            chart3.draw(ticketsData3, options);
+
+
+        }
+    </script>
+    
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': [ 'corechart']});
+      google.charts.setOnLoadCallback(initialize);
+
+      function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query4 = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=1R4yLpb4oO2tKnUpWa1_rwJFVFrWjgMFu2IY3vPnaQeo');
+        query4.send(draw4);
+      }
+
+      function draw4(response) {
+        if (response.isError()) {
+          alert('Error in query');
+        }
+
+        var ticketsData4 = response.getDataTable();
+        var options = {
+          title: 'Tuesday Heart Rate',
+          curveType: 'function',
+          legend: { position: 'bottom'},
+          vAxis: { title: 'Heart Rate'},
+          hAxis: {title: 'Time'},
+                'width' : 864,
+                'height' : 300
+            //axisTitlesPosition : 'none'
+          //hAxis: {ticks: [12:00, 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00]}
+        }; 
+        var chart4 = new google.visualization.LineChart(
+            document.getElementById('filler4'));
+        chart4.draw(ticketsData4, options);
+
+      }
+		
+    </script>
+    
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': [ 'corechart']});
+      google.charts.setOnLoadCallback(initialize);
+
+      function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query5 = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=19vBl9jQq5br1TVPZdLSVAJTg95gv3lUZAhlPYnGn6LA');
+        query5.send(draw5);
+      }
+
+      function draw5(response) {
+        if (response.isError()) {
+          alert('Error in query');
+        }
+
+        var ticketsData5 = response.getDataTable();
+        var options = {
+          title: 'Wednesday Heart Rate',
+          curveType: 'function',
+          legend: { position: 'bottom'},
+          vAxis: { title: 'Heart Rate'},
+          hAxis: {title: 'Time'},
+                'width' : 864,
+                'height' : 300
+            //axisTitlesPosition : 'none'
+          //hAxis: {ticks: [12:00, 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00]}
+        }; 
+        var chart5 = new google.visualization.LineChart(
+            document.getElementById('filler5'));
+        chart5.draw(ticketsData5, options);
+
+
+      }
+		
+    </script>
+    
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': [ 'corechart']});
+      google.charts.setOnLoadCallback(initialize);
+
+      function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query6 = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=1v1bU3LnnBEibBWFmp5IzrWjCLEpQey-1kKD6CdmjB-8');
+        query6.send(draw6);
+      }
+
+      function draw6(response) {
+        if (response.isError()) {
+          alert('Error in query');
+        }
+
+        var ticketsData6 = response.getDataTable();
+        var options = {
+          title: 'Thursday Heart Rate',
+          curveType: 'function',
+          legend: { position: 'bottom'},
+          vAxis: { title: 'Heart Rate'},
+          hAxis: {title: 'Time'},
+                'width' : 864,
+                'height' : 300
+            //axisTitlesPosition : 'none'
+          //hAxis: {ticks: [12:00, 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00]}
+        }; 
+        var chart6 = new google.visualization.LineChart(
+            document.getElementById('filler6'));
+        chart6.draw(ticketsData6, options);
+
+
+      }
+		
+    </script>
+    
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': [ 'corechart']});
+      google.charts.setOnLoadCallback(initialize);
+
+      function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query7 = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=1uC4H8gUOyuOHD1OyqmhJHwCVUwRHpNhWMZDvlB6ndVM');
+        query7.send(draw7);
+      }
+
+      function draw7(response) {
+        if (response.isError()) {
+          alert('Error in query');
+        }
+
+        var ticketsData7 = response.getDataTable();
+        var options = {
+          title: 'Friday Heart Rate',
+          curveType: 'function',
+          legend: { position: 'bottom'},
+          vAxis: { title: 'Heart Rate'},
+          hAxis: {title: 'Time'},
+                'width' : 864,
+                'height' : 300
+            //axisTitlesPosition : 'none'
+          //hAxis: {ticks: [12:00, 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00]}
+        }; 
+        var chart7 = new google.visualization.LineChart(
+            document.getElementById('filler7'));
+        chart7.draw(ticketsData7, options);
+
+
+      }
+		
+    </script>
+    
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': [ 'corechart']});
+      google.charts.setOnLoadCallback(initialize);
+
+      function initialize() {
+        // The URL of the spreadsheet to source data from.
+        var query8 = new google.visualization.Query(
+            'https://spreadsheets.google.com/pub?key=1JYw3oHLZoIM1Z3dzLNd2ikOpcnKx-Mb5E0bwqczlEYg');
+        query8.send(draw8);
+      }
+
+      function draw8(response) {
+        if (response.isError()) {
+          alert('Error in query');
+        }
+
+        var ticketsData8 = response.getDataTable();
+        var options = {
+          title: 'Saturday Heart Rate',
+          curveType: 'function',
+          legend: { position: 'bottom'},
+          vAxis: { title: 'Heart Rate'},
+          hAxis: {title: 'Time'},
+                'width' : 864,
+                'height' : 300
+            //axisTitlesPosition : 'none'
+          //hAxis: {ticks: [12:00, 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00]}
+        }; 
+        var chart8 = new google.visualization.LineChart(
+            document.getElementById('filler8'));
+        chart8.draw(ticketsData8, options);
+
+
+      }
+		
+    </script>
+    
+    <!--Heart Google vis end-->
+
+    <!--Sleep vis start -->
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['bar']
+        });
+        google.charts.setOnLoadCallback(initialize);
+
+        function initialize() {
+            // The URL of the spreadsheet to source data from.
+            var query2 = new google.visualization.Query(
+                'https://spreadsheets.google.com/pub?key=1AAyrxWR2Ho1d2CORMQxdGkNehgr5-7pPgyxXDkZFPhE');
+            query2.send(draw2);
+        }
+
+        function draw2(response) {
+            if (response.isError()) {
+                alert('Error in query');
+            }
+
+            var ticketsData2 = response.getDataTable();
+
+            var options_fullStacked = {
+                isStacked: 'percent',
+                height: 300,
+                legend: {
+                    position: 'top',
+                    maxLines: 3
+                },
+                hAxis: {
+                    minValue: 0,
+                    ticks: [0, .3, .6, .9, 1],
+                },
+                chart2: {
+                    title: 'Sleep Stages',
+                }
+            };
+
+
+            var chart2 = new google.charts.Bar(
+                document.getElementById('filler'));
+            chart2.draw(ticketsData2, options_fullStacked);
+
+
+        }
+    </script>
+    <!--Sleep vis end -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="wrapper">
+            <header onclick="window.location='index.htm'"><img src="imgs/logo.png" height="150" alt="Fit Bit Data Visulaztion">
+            </header>
+
+            <div id="content">
+                <div id="topline">
+                    <nav id="navbar">
+                        <a href="index.htm">Home</a>
+                        <a href="exercise.htm">Exercise</a>
+                        <a href="calories.htm">Dietary</a>
+                        <a class="active" href="Sleep.htm">Sleep</a>
+                    </nav>
+                </div>
+                <h2>Sleep Cycles</h2>
+
+                <div id="main">
+                    <div id="banner">
+                        <div id="filler" class="fill-class">
+
+                        </div>
+                    </div>
+
+                    <!-- Sleep stage table-->
+                    <h2>Sleep Stages</h2>
+                    <div class="destinationTable">
+                        <table width="620" border="2" cellspacing="0" cellpadding="4">
+                            <tr>
+                                <td>Waking</td>
+                                <td>REM Sleep </td>
+                                <td>NREM Sleep </td>
+                            </tr>
+                            <tr>
+                                <td>Stage 0 </td>
+                                <td>Stage R </td>
+                                <td>
+                                    <table width="320" border="2" cellspacing="0" cellpadding="4">
+                                        <tr>
+                                            <td>Light Sleep </td>
+                                            <td>Deep Sleep </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table width="160" border="2" cellspacing="0" cellpadding="4">
+                                                    <tr>
+                                                        <td>Stage 1 </td>
+                                                        <td>Stage 2 </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <table width="160" border="2" cellspacing="0" cellpadding="4">
+                                                    <tr>
+                                                        <td>Stage 3 </td>
+                                                        <td>Stage 4 </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Eyes open, responsive to external stimuli, can hold intelligible conversation</td>
+                                <td>Brain waves similar to waking. Most vivid dreams happen in this stage. Body does not move.</td>
+                                <td>
+                                    <table width="320" border="2" cellspacing="0" cellpadding="4">
+                                        <tr>
+                                            <td>Transition between waking and sleep. If awakened, person will claim was never asleep.</td>
+                                            <td>Main body of light sleep. Memory consolidation. Synaptic pruning.</td>
+                                            <td>Slow waves on EEG readings. </td>
+                                            <td>Slow waves on EEG readings.</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>16 to 18 hours per day</td>
+                                <td>90 to 120 min/night </td>
+                                <td>4 to 7 hours per night </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div id="bottom">
+                        <h2>Resting Heart Rate</h2>
+                        <div id="banner">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval=false>
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+
+                                        <div id="filler2" class="fill-class">
+                                            Graph
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div id="filler3" class="fill-class">
+                                            Graph
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div id="filler4" class="fill-class">
+                                            Graph
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div id="filler5" class="fill-class">
+                                            Graph
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div id="filler6" class="fill-class">
+                                            Graph
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div id="filler7" class="fill-class">
+                                            Graph
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div id="filler8" class="fill-class">
+                                            Graph
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div id="foot">
+
+                    <div class="activity" onclick="window.location='exercise.html'">
+                        <a href="exercise.htm">
+
+
+                            <div class="icon3">
+
+                            </div>
+                            <h4>
+                           Exercise
+                       </h4>
+                        </a>
+                    </div>
+
+                    <div class="activity" onclick="window.location='calories.htm'">
+                        <a href="calories.htm">
+
+                            <div class="icon">
+
+                            </div>
+                            <h4>
+                           Dietary
+                       </h4>
+                        </a>
+                    </div>
+
+                    <div class="activity" onclick="window.location='sleep.html'">
+                        <a class="active" href=Sleep.htm>
+
+                            <div class="icon2">
+                            </div>
+                            <h4>
+                           Sleep
+                       </h4>
+                        </a>
+                    </div>
+                </div>
+                <!--END footer-->
+            </div>
+        </div>
+    </div>
+</body>
+<!-- InstanceEnd -->
+
+</html>

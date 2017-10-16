@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="layout.css">
+    <title>Project Website</title>
+    <script type="text/javascript">
+        var figure = $(".video").hover(hoverVideo, hideVideo);
+
+        function hoverVideo(e) {
+            $('video', this).get(0).play();
+        }
+
+        function hideVideo(e) {
+            $('video', this).get(0).pause();
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="wrapper">
+            <header onclick="window.location='index.htm'"><img src="imgs/logo.png" height="150" alt="Fit Bit Data Visulaztion"></header>
+            <!--Disabled Navation bar -->
+            <!--To be redesined, move with page - select vis type? -->
+
+            <div id="content">
+                <div id="bottom">
+                    <div id="left" class="box">
+                    	<a href="exercise.htm">
+                        <video muted id="sleepvideo" onmouseover="this.play()" onmouseout="this.load()">
+                        <source src="imgs/exercise2.mp4" type="video/mp4">
+                        <source src="mov_bbb.ogg" type="video/ogg"> Your browser does not support HTML5 video. </video>
+                        </a>
+                    </div>
+                    <a href="calories.htm">
+                    <div id="right" class="box">
+                       <video muted id="sleepvideo" onmouseover="this.play()" onmouseout="this.load()">
+                        <source src="imgs/calories.mp4" type="video/mp4">
+                        <source src="mov_bbb.ogg" type="video/ogg"> Your browser does not support HTML5 video. </video>
+                    </div>
+                    </a>
+                </div>
+
+                <div id="banner">
+                	<a href="Sleep.htm">
+                    <video muted id="sleepvideo" onmouseover="this.play()" onmouseout="this.load()">
+                        <source src="imgs/sleep.mp4" type="video/mp4">
+                        <source src="mov_bbb.ogg" type="video/ogg"> Your browser does not support HTML5 video. </video>
+                    </a>
+                </div>
+
+
+            </div>
+            <!--END CONTENT-->
+            <!--END RIGHTCOLUMN-->
+        </div>
+    </div>
+    <!--END WRAPPER-->
+</body>
+<!-- InstanceEnd -->
+
+</html>
