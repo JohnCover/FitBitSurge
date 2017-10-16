@@ -1,4 +1,5 @@
 FitBit Surge Website
+http://web.csulb.edu/~jcover/448/
 
 John Lloyd Cover, Allan Dominguez, Peyton Leon Drouhard, Erwin Dale Gumabao Guillermo, and Ryan Michael Fritz,
 
@@ -6,7 +7,7 @@ Computer Engineering &amp; ComputerScience, User Interface Design Class
 
 California State University, Long Beach 250 Bellflower Boulevard, Long Beach, California 90840
 
-# 1Abstract. 
+# 1 Abstract
 The purpose of this report is to describe the process of creating an interactive interface for the fitness super watch, FitBit Surge. The interactive interface which was developed and presented within this report is a web based platform. Special attention was given to the usability of the interface as it relates to user interaction and general usability heuristics. A description of the FitBit is given. Data acquisition and implementation in the design is described along with a proposed plan to evaluate overall system usability.
 
 
