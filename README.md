@@ -6,7 +6,8 @@ Computer Engineering &amp; ComputerScience, User Interface Design Class
 
 California State University, Long Beach 250 Bellflower Boulevard, Long Beach, California 90840
 
-# 1Abstract. The purpose of this report is to describe the process of creating an interactive interface for the fitness super watch, FitBit Surge. The interactive interface which was developed and presented within this report is a web based platform. Special attention was given to the usability of the interface as it relates to user interaction and general usability heuristics. A description of the FitBit is given. Data acquisition and implementation in the design is described along with a proposed plan to evaluate overall system usability.
+# 1Abstract. 
+The purpose of this report is to describe the process of creating an interactive interface for the fitness super watch, FitBit Surge. The interactive interface which was developed and presented within this report is a web based platform. Special attention was given to the usability of the interface as it relates to user interaction and general usability heuristics. A description of the FitBit is given. Data acquisition and implementation in the design is described along with a proposed plan to evaluate overall system usability.
 
 
 
@@ -32,7 +33,7 @@ Our goal was to create an interactive website that displays health metrics to al
 
 Generating data was one of the major obstacles on the development side of this project.  FitBit didn&#39;t make our data as available as we had initially anticipated.  We struggled quite a bit with implementing the OAuth 2.0 identity and policy architecture FitBit utilizes for their authentication.  We needed an implementation that was designed for a client-side web application so we attempted to develop one using a JavaScript runtime built on Chrome&#39;s V8 JavaScript engine: Node.js.
 
-After several builds of our Node.js OAuth client failed, we had to – in the interest of time - scrap the project and take advantage of an existing community development tool that allowed us to pull the more detailed data that we were looking to access from their API – intraday data they called it.  With this tool we were able to pull intraday data over three categories: Activity, Heart Rate, and Sleep.
+After several builds of our Node.js OAuth client failed, we had to â€“ in the interest of time - scrap the project and take advantage of an existing community development tool that allowed us to pull the more detailed data that we were looking to access from their API â€“ intraday data they called it.  With this tool we were able to pull intraday data over three categories: Activity, Heart Rate, and Sleep.
 
 ## 2.2 Data Format
 
@@ -74,7 +75,7 @@ Four different types of graphs were used to display health data. (1) Donut graph
 
 1. 4Implementation
 
-We chose to go with a web client for our implementation. We felt that it was a good platform for the direction we wanted to take our software which emphasizes data visualization.  It was also the platform that, as a group, we felt the most confident developing in – given our timeframe and assignment criteria.
+We chose to go with a web client for our implementation. We felt that it was a good platform for the direction we wanted to take our software which emphasizes data visualization.  It was also the platform that, as a group, we felt the most confident developing in â€“ given our timeframe and assignment criteria.
 
 ## 4.1 Frameworks
 
